@@ -10,5 +10,12 @@ public class SuperArrayIterator implements Iterator<String>{
     }
 
     public boolean hasNext(){
-	return (index < sa.size());
+	return (index < s.size());
+    }
+    public String next(){
+	return (s.get(index + 1));
+    }
+    public void Remove(){
+	throw UnsupportedOperationException();
+    }
 }
