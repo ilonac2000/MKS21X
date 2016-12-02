@@ -1,11 +1,11 @@
 public class Book{
-    private string author;
-    private string title;
-    private string ISBN;
+    private String author;
+    private String title;
+    private String ISBN;
     public Book(){
 	System.out.println("you haven't included a book!");
     }
-    public Book(string person, string name, string number){
+    public Book(String person, String name, string number){
 	author = person;
 	title = name;
 	ISBN = number;
@@ -19,7 +19,7 @@ public class Book{
     public string getISBN(){
 	return ISBN;
     }
-    public void setAuthor(string a){
+    public void setAuthor(String a){
 	author = a;
     }	
     public void setAuthor(string t){
@@ -31,5 +31,10 @@ public class Book{
     public String toString(){
 	return title + ", " + author + ", " + ISBN;
     }
-
+public static void main(String[]args){
+    Book a = new Book();
+    Book b = new Book("a", "b", "12012310241204");
+    System.out.println(a);
+    System.out.println(b);
+}
 }
