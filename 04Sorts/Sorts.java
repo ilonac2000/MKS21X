@@ -32,12 +32,24 @@ public class Sorts{
   }     
 }
 }
+public static void bubbleSort(int[] data){ 
+   for (int i = 1; i < data.length; i++){
+   for (int j = i; j  > 0; j--){
+       if (data[j - 1] > data[j]){
+         int temp = data[j];
+         data[j] = data[j-1];
+         data[j-1] = temp;
+     }
+  }     
+}
+}
  
 
 public static void main(String []args){   
         int[] a = {64,25,12,22,11};
         //selectionSort(a);
-	insertionSort(a);
+	//insertionSort(a);
+	bubbleSort(a);
         for(int i:a){
             System.out.print(i);
             System.out.print(", ");
