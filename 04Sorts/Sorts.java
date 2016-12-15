@@ -18,27 +18,26 @@ public class Sorts{
         data[i] = min;
           }
 	  }  
-    }
   }
- public static void insertionSort(int[] data){ 
-     for (int i = 0; i < data.length; i++){
-	 int index = data[i];
-	 for (int j = i - 1; j  > 0; j--){
-	     if (data[j] > index){
-		 if (j == 1 || data[j - 1] < index){
-		     int temp = data[j];
-		     data[j] = index;
-		     index = temp;
-		 }
-	     }		 
-	 }
-     }
- }
+}
 
-     
+ public static void insertionSort(int[] data){ 
+   for (int i = 1; i < data.length; i++){
+   for (int j = i; j  > 0; j--){
+       if (data[j - 1] > data[j]){
+         int temp = data[j];
+         data[j] = data[j-1];
+         data[j-1] = temp;
+     }
+  }     
+}
+}
+ 
+
 public static void main(String []args){   
         int[] a = {64,25,12,22,11};
-        insertionSort(a);
+        //selectionSort(a);
+	insertionSort(a);
         for(int i:a){
             System.out.print(i);
             System.out.print(", ");
