@@ -8,6 +8,7 @@ public class Sorts{
   *@param data  the elements to be sorted.
   */
   public static void selectionSort(int[] data){ 
+  if (data.length != 0){
     for (int i = 0; i < data.length; i++){
 	  int index = i;
 	  for (int j = 0; j < data.length; j++){
@@ -20,8 +21,10 @@ public class Sorts{
 	  }  
   }
 }
+  }
 
  public static void insertionSort(int[] data){ 
+if (data.length != 0){
    for (int i = 1; i < data.length; i++){
    for (int j = i; j  > 0; j--){
        if (data[j - 1] > data[j]){
@@ -32,7 +35,9 @@ public class Sorts{
   }     
 }
 }
+ }
 public static void bubbleSort(int[] data){ 
+if (data.length != 0){
     int temp = 0;
     for (int i = 0; i < data.length; i++) {
         for (int j = 1; j < (data.length - i); j++) {
@@ -43,6 +48,7 @@ public static void bubbleSort(int[] data){
             }
         }
     }
+}
 }
 /*public static void main(String []args){   
         int[] a = {64,25,12,22,11};
